@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor() { }
+  private base_url_user_search: string = "https://api.github.com/users/"
+  private userInput: string = "evansmutwiri"
+  private reqUrl: string = this.base_url_user_search + this.userInput
+
+  constructor(private http:HttpClient) { }
+
+  searchUser (username: string) {
+    console.log(this.http.get(this.reqUrl))
+  }
 }
