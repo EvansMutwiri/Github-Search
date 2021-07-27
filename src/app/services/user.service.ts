@@ -21,6 +21,6 @@ export class UserService {
   getUser ()
   {
 
-    return this.http.get('https://api.github.com/users/' + this.username);
+    return this.http.get('https://api.github.com/users/ + this.username');
   }
 }
