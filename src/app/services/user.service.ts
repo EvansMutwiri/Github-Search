@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http'
 export class UserService {
 
   private base_url_user_search: string = "https://api.github.com/users/"
-  private userInput: string = "evansmutwiri"
-  private reqUrl: string = this.base_url_user_search + this.userInput
+  // private userInput: string = "evansmutwiri"
+
 
   constructor(private http:HttpClient) { }
 
   searchUser (username: string) {
-    console.log(this.http.get(this.reqUrl))
+    var reqUrl: string = this.base_url_user_search + username
+    console.log(this.http.get(reqUrl))
   }
 }
