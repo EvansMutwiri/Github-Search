@@ -16,6 +16,7 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpClientModule
 
 
   ],

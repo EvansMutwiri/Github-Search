@@ -1,19 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
+import 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private base_url_user_search: string = "https://api.github.com/users/"
-  // private userInput: string = "evansmutwiri"
+  private username: string = "EvansMutwiri"
+  created_at!: string;
+   bio!: string;
+  url!: string;
+  repos_url!: string;
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.username = 'EvansMutwiri'
+  }
 
-  searchUser (username: string) {
-    var reqUrl: string = this.base_url_user_search + username
-    console.log(this.http.get(reqUrl))
+  getUser ()
+  {
+
+    return this.http.get('https://api.github.com/users/' + this.username);
   }
 }

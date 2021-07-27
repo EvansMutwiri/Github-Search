@@ -8,12 +8,24 @@ import { UserService } from '../services/user.service';
 })
 export class UserComponent implements OnInit {
 
-  private searchQuery: string = "evansmutwiri";
+  // private searchQuery: string = "evansmutwiri";
 
-  constructor(private userService: UserService) { }
+  user: any;
 
+  constructor(private userService: UserService) {
+
+
+   }
   ngOnInit(): void {
-    this.userService.searchUser(this.searchQuery);
+    // throw new Error('Method not implemented.');
+  }
+
+
+  getUser(){
+    this.userService.getUser().subscribe((user) => {
+      this.user =user;
+      console.log (this.user)
+    });
   }
 
 }
