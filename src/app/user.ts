@@ -1,4 +1,4 @@
-export interface IUser {
+export interface User {
   avatar_url: string;
 name: string;
 blog: string;

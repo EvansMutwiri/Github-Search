@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { UserService } from './services/user.service';
 import { UserComponent } from './user/user.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    NavigationComponent
+    NavigationComponent,
+    PersonalInfoComponent
   ],
   imports: [
     BrowserModule,

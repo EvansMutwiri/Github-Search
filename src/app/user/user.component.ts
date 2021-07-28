@@ -8,7 +8,6 @@ import { UserService } from '../services/user.service';
 })
 export class UserComponent implements OnInit {
 
-  // private searchQuery: string = "evansmutwiri";
 
   user: any;
 

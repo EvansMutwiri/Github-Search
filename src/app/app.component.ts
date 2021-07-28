@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,5 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   title = 'Github-Search';
+  username = environment.username;
 }

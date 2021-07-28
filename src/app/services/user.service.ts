@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { User } from '../models/user';
 import 'rxjs'
 
 @Injectable({
@@ -7,20 +10,15 @@ import 'rxjs'
 })
 export class UserService {
 
-  private username: string = "EvansMutwiri"
-  created_at!: string;
-   bio!: string;
-  url!: string;
-  repos_url!: string;
+  username: string = 'environment.username'
 
 
-  constructor(private http:HttpClient) {
-    this.username = 'EvansMutwiri'
+  constructor(private http: HttpClient) {
+
   }
 
-  getUser ()
-  {
-
-    return this.http.get('https://api.github.com/users/ + this.username');
-  }
+public getUser(): Observable<User> {
+return this.http.get<User>(`${environment.apiUrl}/
+users/${environment.username}`);
+}
 }
