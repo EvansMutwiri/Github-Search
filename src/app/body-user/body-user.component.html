@@ -1,16 +1,15 @@
 <div class="container card" #myComponent>
     <a href="https://github.com/{{user.userName}}">
-        <img appHover src="{{user.avatar}}" alt="User Avatar" height="250px" width="270px">
+        <img class="card-img-top" appHover src="{{user.avatar}}" alt="User Avatar">
     </a>
     <br>
     <div>
         <div>
-            <div>{{user.fullName}}</div>
-            <span style="font-size: small;">{{user.location}}</span>
+            <div class="card-title text-nowrap bd-highlight">{{user.fullName}} <span class="d-flex" style="font-size: small;">{{user.location}}</span></div>
         </div>
-        <p class="aboutTitle" style="text-decoration: underline;">About</p>
+        <p class="aboutTitle">About</p>
         <div>
-            <span class="aboutTitle">Username:</span> {{user.userName}} <br>
+            <!-- <span class="aboutTitle">Username:</span> {{user.userName}} <br> -->
             <span class="aboutTitle">Bio:</span> {{user.bio}}
         </div>
         <div>

@@ -1,8 +1,15 @@
 <ng-progress></ng-progress>
-<div class="container" *ngFor='let repo of httpService.repo; let i = index;' #repoComponent>
-    <a href="{{httpService.repo[i].html_url}}">
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card w-100">
+      <div class="card-body" *ngFor='let repo of httpService.repo; let i = index;' #repoComponent>
+      <a href="{{httpService.repo[i].html_url}}">
         <span class="aboutTitle">Title:</span> {{httpService.repo[i].name}} <br>
-    </a>
-    {{httpService.repo[i].description}} <br>
-    <span class="aboutTitle">Last Updated:</span> {{httpService.repo[i].updated_at | date}} <br>
+      </a>
+      {{httpService.repo[i].description}} <br>
+      <span class="aboutTitle">Last Updated:</span> {{httpService.repo[i].updated_at | date}} <br>
+    </div>
+    </div>
+  </div>
 </div>
