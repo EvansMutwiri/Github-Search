@@ -18,7 +18,7 @@ export class BodyNavComponent implements OnInit {
       element.classList.remove('navbar-inverse');
     }
   }
-  
+
   constructor() { }
 
   ngOnInit() {

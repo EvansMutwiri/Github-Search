@@ -13,7 +13,7 @@ export class AppComponent {
   ngOnInit(){
     this.ngxService.start();
     setTimeout(() => {
-      this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
-    }, 1000);
+      this.ngxService.stop();
+    }, 1500);
   }
 }

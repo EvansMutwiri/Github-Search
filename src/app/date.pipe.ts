@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'date'
 })
 export class DatePipe implements PipeTransform {
-  
+
   transform(value: any, args?:any): any {
     if(value){
       let today:any= new Date();
@@ -35,7 +35,7 @@ export class DatePipe implements PipeTransform {
       }
     }
     return value;
-    
+
   }
 
 }

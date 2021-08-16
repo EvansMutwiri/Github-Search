@@ -1,25 +1,22 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { Repository } from '../repository';
+import { GitService } from '../apicalls/git.service';
 
-import { BodyRepoComponent } from './body-repo.component';
+@Component({
+  selector: 'app-body-repo',
+  templateUrl: './body-repo.component.html',
+  styleUrls: ['./body-repo.component.css']
+})
+export class BodyRepoComponent implements OnInit {
 
-describe('BodyRepoComponent', () => {
-  let component: BodyRepoComponent;
-  let fixture: ComponentFixture<BodyRepoComponent>;
+  repo:Repository;
+  myUserName = 'EvansMutwiri';
+  retrievedData:string;
+  constructor(public httpService:GitService) { }
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ BodyRepoComponent ]
-    })
-    .compileComponents();
-  }));
+  ngOnInit() {
+    this.retrievedData = localStorage.getItem('name-data')
+    this.httpService.repoRequest(this.retrievedData)
+  }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BodyRepoComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+}
