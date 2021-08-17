@@ -53,7 +53,7 @@ export class GitService {
       updated_at: Date
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<RepoApiResponse>(`${environment.gitUrl}${searchName}${environment.repoAccess}${environment.accessToken}`).toPromise().then(response => {
+      this.http.get<RepoApiResponse>(`${environment.gitUrl}${searchName}${environment.repoAccess}`).toPromise().then(response => {
         this.repo = response;
 
         resolve()
