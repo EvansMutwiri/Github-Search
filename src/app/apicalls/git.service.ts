@@ -27,7 +27,7 @@ export class GitService {
       created_at: Date
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<UserApiResponse>(`${environment.gitUrl}${searchName}${environment.accessToken}`).toPromise().then(response=>{
+      this.http.get<UserApiResponse>(`${environment.gitUrl}${searchName}`).toPromise().then(response=>{
         this.user.avatar = response.avatar_url
         this.user.userName = response.login
         this.user.location = response.location
