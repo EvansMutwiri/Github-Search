@@ -5,10 +5,11 @@
     <div class="card w-100">
       <div class="card-body" *ngFor='let repo of httpService.repo; let i = index;' #repoComponent>
       <a href="{{httpService.repo[i].html_url}}">
-        <span class="aboutTitle">Title:</span> {{httpService.repo[i].name}} <br>
+        <span class="h3">Title:</span> {{httpService.repo[i].name}} <br>
       </a>
+      <hr/>
       {{httpService.repo[i].description}} <br>
-      <span class="aboutTitle">Last Updated:</span> {{httpService.repo[i].updated_at | date}} <br>
+      <span class="h4">Last Updated:</span> {{httpService.repo[i].updated_at | date}} <br>
     </div>
     </div>
   </div>

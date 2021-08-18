@@ -1,21 +1,21 @@
-<div class="container card" #myComponent>
+<div class="card" style="width: 18rem;" #myComponent>
     <a href="https://github.com/{{user.userName}}">
         <img class="card-img-top" appHover src="{{user.avatar}}" alt="User Avatar">
     </a>
     <br>
     <div>
         <div>
-            <div class="card-title text-nowrap bd-highlight">{{user.fullName}} <span class="d-flex" style="font-size: small;">{{user.location}}</span></div>
+            <div class="card-title h3">{{user.fullName}} <span class="d-flex" style="font-size: small;">{{user.location}}</span></div>
         </div>
-        <p class="aboutTitle">About</p>
+        <p class="h6">About</p>
         <div>
             <!-- <span class="aboutTitle">Username:</span> {{user.userName}} <br> -->
-            <span class="aboutTitle">Bio:</span> {{user.bio}}
+            <span class="h6">Bio:</span> {{user.bio}}
         </div>
         <div>
-            <span><span class="aboutTitle">Public Repositories:</span> {{user.repos}}</span>
+            <span><span class="h6">Public Repositories:</span> {{user.repos}}</span>
             <br>
-            <span><span class="aboutTitle">Joined Github:</span> {{user.joined | date}}</span>
+            <span><span class="h6">Joined Github:</span> {{user.joined | date}}</span>
         </div>
     </div>
 </div>

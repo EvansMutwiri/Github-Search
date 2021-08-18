@@ -1,3 +1,5 @@
 export class OtherUser {
-    constructor(public userName:string){}
+    constructor(public userName: string) {
+
+    }
 }

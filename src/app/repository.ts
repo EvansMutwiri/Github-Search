@@ -1,3 +1,4 @@
 export class Repository {
-    constructor(public name:string, public description: string, public updated_at: Date, public html_url: string){}
+    // tslint:disable-next-line: variable-name
+    constructor(public name: string, public description: string, public updated_at: Date, public html_url: string) {}
 }
