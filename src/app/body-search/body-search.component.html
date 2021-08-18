@@ -2,7 +2,7 @@
 <div class="navbar-default sticky-top">
     <form #userForm='ngForm' (ngSubmit)='submitName()'>
         <input type="text" name="Search" id="searchGit" [(ngModel)]='user.userName' name='user'
-            #name='ngModel' placeholder="Search for users!!" required>
+            #name='ngModel' placeholder="Search users" required>
         <button type="submit" class="btn btn-secondary">Search</button>
     </form>
 </div>
