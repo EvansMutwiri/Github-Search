@@ -28,7 +28,7 @@ export class DatePipe implements PipeTransform {
         counter = Math.floor(seconds / timeIntervals[timeInterval]);
         if (counter > 0) {
           if (counter === 1) {
-            return counter + ' ' + timeInterval + ' ago'; // caters for singular
+            return counter + ' ' + timeInterval + ' ago';
           } else {
             return counter + ' ' + timeInterval + 's ago'; // caters for plural
           }

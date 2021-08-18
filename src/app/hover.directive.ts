@@ -8,16 +8,16 @@ export class HoverDirective {
 
   constructor(private element: ElementRef) {}
 
-  @HostListener('mouseenter') onMouseEnter(){
-    this.textDecoration('0.7')
+  @HostListener('mouseenter') onMouseEnter() {
+    this.textDecoration('0.7');
   }
 
-  @HostListener('mouseleave') onMouseLeave(){
-    this.textDecoration('1')
+  @HostListener('mouseleave') onMouseLeave() {
+    this.textDecoration('1');
   }
-   
-  private textDecoration(action:string){
-    this.element.nativeElement.style.opacity = action
+
+  private textDecoration(action: string) {
+    this.element.nativeElement.style.opacity = action;
    }
 
 }
