@@ -7,17 +7,17 @@ import { OtherUser } from '../other-user';
   styleUrls: ['./body-search.component.css']
 })
 export class BodySearchComponent implements OnInit {
+  constructor() {}
 
   user = new OtherUser('');
-  constructor() {}
+
+  newUser: string = '';
 
   ngOnInit() {
   }
 
-  newUser: string = ""
-
   submitName(){
-    if(this.newUser == "") {
+    if(this.newUser === '') {
       localStorage.setItem('name-data', this.user.userName)
     }
   }
