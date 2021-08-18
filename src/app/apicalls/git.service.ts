@@ -9,58 +9,58 @@ import { Repository } from '../repository';
 })
 export class GitService {
 
-  constructor(private http:HttpClient){
-    this.user = new User ('','','','','',0,new Date())
+  constructor(private http: HttpClient) {
+    this.user = new User ('', '', '', '', '', 0, new Date());
   }
 
-  user:User;
-  repo:Repository;
+  user: User;
+  repo: Repository;
 
   userRequest = (searchName) => {
-    interface UserApiResponse{
-      avatar_url: string,
-      login: string,
-      location: string,
-      name: string,
-      bio: string,
-      public_repos: number,
-      created_at: Date
+    interface UserApiResponse {
+      avatar_url: string;
+      login: string;
+      location: string;
+      name: string;
+      bio: string;
+      public_repos: number;
+      created_at: Date;
     }
-    let promise = new Promise((resolve, reject) => {
-      this.http.get<UserApiResponse>(`${environment.gitUrl}${searchName}`).toPromise().then(response=>{
-        this.user.avatar = response.avatar_url
-        this.user.userName = response.login
-        this.user.location = response.location
-        this.user.fullName = response.name
-        this.user.bio = response.bio
-        this.user.repos = response.public_repos
-        this.user.joined = response.created_at
+    const promise = new Promise((resolve, reject) => {
+      this.http.get<UserApiResponse>(`${environment.gitUrl}${searchName}`).toPromise().then(response => {
+        this.user.avatar = response.avatar_url;
+        this.user.userName = response.login;
+        this.user.location = response.location;
+        this.user.fullName = response.name;
+        this.user.bio = response.bio;
+        this.user.repos = response.public_repos;
+        this.user.joined = response.created_at;
 
 
-        resolve()
+        resolve();
         return promise;
-      }, error => {
+      }, _error => {
         return null;
-      })
-    })
+      });
+    });
   }
 
   repoRequest = (searchName) => {
-    interface RepoApiResponse{
-      name: string
-      description: string
-      html_url: string
-      updated_at: Date
+    interface RepoApiResponse {
+      name: string;
+      description: string;
+      html_url: string;
+      updated_at: Date;
     }
-    let promise = new Promise((resolve, reject) => {
+    const promise = new Promise((resolve, reject) => {
       this.http.get<RepoApiResponse>(`${environment.gitUrl}${searchName}${environment.repoAccess}`).toPromise().then(response => {
         this.repo = response;
 
-        resolve()
-      }, error => {
-        reject(error)
-      })
-    })
+        resolve();
+      }, function error() {
+        reject(error);
+      });
+    });
     return promise;
   }
 }

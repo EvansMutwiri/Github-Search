@@ -7,13 +7,16 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GitSearch';
-  constructor(private ngxService: NgxUiLoaderService) { }
+  title = 'angular loader';
+  loader = true;
+
+  // constructor(private ngxService: NgxUiLoaderService) { }
 
   ngOnInit(){
-    this.ngxService.start();
-    setTimeout(() => {
-      this.ngxService.stop();
-    }, 1500);
+    // this.ngxService.start();
+    // setTimeout(() => {
+    //   this.ngxService.stop();
+    // }, 500);
+    this.loader = false;
   }
 }

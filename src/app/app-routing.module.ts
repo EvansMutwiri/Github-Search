@@ -6,9 +6,9 @@ import { WrongRouteComponent } from './wrong-route/wrong-route.component';
 
 
 const routes: Routes = [
-  {path:'user', component: BodyUserComponent},
-  {path:'repos', component: BodyRepoComponent},
-  { path: '', redirectTo:"/user", pathMatch:"full"},
+  {path: 'user', component: BodyUserComponent},
+  {path: 'repos', component: BodyRepoComponent},
+  { path: '', redirectTo:'/user', pathMatch:'full'},
   {path: '**', component: WrongRouteComponent}
 ];
 
