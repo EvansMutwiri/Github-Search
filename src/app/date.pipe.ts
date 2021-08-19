@@ -30,7 +30,7 @@ export class DatePipe implements PipeTransform {
           if (counter === 1) {
             return counter + ' ' + timeInterval + ' ago';
           } else {
-            return counter + ' ' + timeInterval + 's ago'; // caters for plural
+            return counter + ' ' + timeInterval + 's ago';
           }
         }
       }

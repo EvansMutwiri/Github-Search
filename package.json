@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.14",
     "@ngx-progressbar/core": "^3.0.2",
     "@ngx-progressbar/http-client": "^3.0.2",
+    "angular-persistence": "^1.0.1",
     "bootstrap": "^4.4.1",
     "ngx-ui-loader": "^8.0.0",
     "popper": "^1.0.1",
