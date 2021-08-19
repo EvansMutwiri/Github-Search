@@ -1,9 +1,9 @@
 <p class="info">Git Hub Search Users and Repositories</p>
-<div class="navbar-default sticky-top">
-    <form #userForm='ngForm' (ngSubmit)='submitName()'>
-        <input type="text" name="Search" id="searchGit" [(ngModel)]='user.userName' name='user'
+<div >
+    <form  #userForm='ngForm' (ngSubmit)='submitName()'>
+        <input class="form-control" type="text" name="Search" id="searchGit" [(ngModel)]='user.userName' name='user'
             #name='ngModel' placeholder="Search users" required>
-        <button type="submit" class="btn btn-secondary">Search</button>
+
+             <button type="submit" class="btn btn-secondary">Search</button>
     </form>
 </div>
-<br>
